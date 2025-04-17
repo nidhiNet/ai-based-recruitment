@@ -1,0 +1,59 @@
+{
+    "success": true,
+    "statusCode": 200,
+    "timestamp": 1739353481641,
+    "errors": [],
+    "message": "Question summerized word generated successfully",
+    "data": {
+        "role": "Sales Engineer",
+        "experience": 5,
+        "criteria": {
+            "Initial Screening Interview": {
+                "Verification of Experience and Qualifications": [
+                    "experience verification",
+                    "resume accuracy",
+                    "qualification relevance"
+                ],
+                "Communication Skills and Professionalism": [
+                    "clarity of speech",
+                    "professional demeanor",
+                    "articulation"
+                ],
+                "Motivation and Interest": [
+                    "passion for sales",
+                    "career aspirations",
+                    "alignment with vision"
+                ],
+                "Logistical Considerations": [
+                    "availability",
+                    "salary expectations",
+                    "relocation readiness"
+                ]
+            },
+            "First-Round (In-Person or Detailed Video) Interview": {
+                "In-Depth Technical/Functional Skills Evaluation": [
+                    "technical assessment",
+                    "functional expertise",
+                    "problem-solving",
+                    "competency evaluation"
+                ],
+                "Behavioural and Soft Skills Analysis": [
+                    "interpersonal skills",
+                    "adaptability",
+                    "teamwork",
+                    "problem-solving"
+                ],
+                "Cultural Fit and Alignment with Company Values": [
+                    "team dynamics",
+                    "value alignment",
+                    "organizational culture fit"
+                ],
+                "Candidate Preparedness and Engagement": [
+                    "company research",
+                    "thoughtful questions",
+                    "genuine interest"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,512 @@
+{
+  "role": "Sales Assistant",
+  "questions": {
+    "category": {
+      "Initial Screening Interview": {
+        "subcategory": {
+          "Verification of Experience and Qualifications": {
+            "questions": [
+              {
+                "ques": "Can you walk me through your experience in sales?"
+              },
+              {
+                "ques": "How have your previous roles prepared you for this position?"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+
+
+{
+    "success": true,
+    "statusCode": 200,
+    "timestamp": 1738668215338,
+    "errors": [],
+    "message": "Role summary generated successfully",
+    "data": {
+        "role": "QA Engineer",
+        "questions": {
+            "Initial Screening Interview": {
+                "Verification of Experience and Qualifications": {
+                    "questions": [
+                        "Please outline your experience in QA and the methodologies you have used.",
+                        "Can you describe any certifications or training relevant to the QA field?"
+                    ]
+                },
+                "Resume Accuracy": {
+                    "questions": [
+                        "How accurately does your resume represent your actual experiences and what would you like to clarify or emphasize?",
+                        "Can you explain any discrepancies or gaps in your employment history as listed on your resume?"
+                    ]
+                },
+                "Relevance": {
+                    "questions": [
+                        "How do you believe your previous roles have prepared you for the position of a QA Engineer?",
+                        "What aspects of your past experience do you find most relevant to this role?"
+                    ]
+                },
+                "Communication Skills and Professionalism": {
+                    "questions": [
+                        "How would you describe your communication style?",
+                        "Can you give an example of a professional challenge you faced and how you addressed it?"
+                    ]
+                },
+                "Motivation and Interest": {
+                    "questions": [
+                        "What motivates you in your QA career?",
+                        "Why are you interested in working for our company as a QA Engineer?"
+                    ]
+                },
+                "Logistical Considerations": {
+                    "questions": [
+                        "Are you able to relocate, or are you proficient with remote work tools if needed?",
+                        "What is your availability to start working with us, should you be offered the position?"
+                    ]
+                }
+            },
+            "First-Round Interview": {
+                "In-Depth Technical/Functional Skills Evaluation": {
+                    "questions": [
+                        "Can you explain the difference between black-box and white-box testing?",
+                        "What are your experiences with automated testing tools, and which ones do you prefer?"
+                    ]
+                },
+                "Practical Application": {
+                    "questions": [
+                        "Describe a scenario where you identified a significant flaw in a product prior to release. How did you handle it?",
+                        "Can you discuss a situation where you implemented a test that significantly improved product quality?"
+                    ]
+                },
+                "Behavioural and Soft Skills Analysis": {
+                    "questions": [
+                        "Describe a time when you had to work under significant pressure. How did you manage your tasks?",
+                        "How do you handle conflict in the workplace, especially if it involves project priorities?"
+                    ]
+                },
+                "Cultural Fit and Alignment with Company Values": {
+                    "questions": [
+                        "How do you align your personal values with the company's mission?",
+                        "In what ways have you demonstrated your commitment to workplace ethics and integrity?"
+                    ]
+                },
+                "Candidate Preparedness and Engagement": {
+                    "questions": [
+                        "How have you prepared for today's interview regarding understanding our company and its products?",
+                        "What questions do you have for us about the role, company, or team you'll be working with?"
+                    ]
+                }
+            }
+        }
+    }
+}
+
+
+{
+    "success": true,
+    "statusCode": 200,
+    "timestamp": 1738668458812,
+    "errors": [],
+    "message": "Role summary generated successfully",
+    "data": {
+        "role": "QA Engineer",
+        "questions": {
+            "Initial Screening Interview": {
+                "Verification of Experience and Qualifications": {
+                    "questions": [
+                        {
+                            "ques": "Can you provide details about your experience with automated testing tools?"
+                        },
+                        {
+                            "ques": "What certifications relevant to quality assurance do you hold?"
+                        }
+                    ]
+                },
+                "Resume Accuracy": {
+                    "questions": [
+                        {
+                            "ques": "How do you ensure the accuracy and consistency of data when testing?"
+                        },
+                        {
+                            "ques": "Can you explain any discrepancies between your resume and your actual experience?"
+                        }
+                    ]
+                },
+                "Relevance": {
+                    "questions": [
+                        {
+                            "ques": "How relevant is your previous job experience to the role of a QA Engineer?"
+                        },
+                        {
+                            "ques": "What aspects of your previous roles do you believe prepare you most for a job in quality assurance?"
+                        }
+                    ]
+                },
+                "Communication Skills and Professionalism": {
+                    "questions": [
+                        {
+                            "ques": "How do you handle communication in a team, especially when reporting bugs or issues?"
+                        },
+                        {
+                            "ques": "Can you share an example where your professional communication made a difference in project outcome?"
+                        }
+                    ]
+                },
+                "Motivation and Interest": {
+                    "questions": [
+                        {
+                            "ques": "What drives your interest in quality assurance?"
+                        },
+                        {
+                            "ques": "Why did you apply to this particular QA Engineer position?"
+                        }
+                    ]
+                },
+                "Logistical Considerations": {
+                    "questions": [
+                        {
+                            "ques": "Are you able to work the required hours for this role including potential overtime?"
+                        },
+                        {
+                            "ques": "What are your salary expectations and how flexible are you regarding them?"
+                        }
+                    ]
+                },
+                "First-Round Interview": {
+                    "In-Depth Technical/Functional Skills Evaluation": {
+                        "questions": [
+                            {
+                                "ques": "Can you discuss your experience with test automation frameworks such as Selenium or Cucumber?"
+                            },
+                            {
+                                "ques": "How do you stay updated with the latest QA methodologies?"
+                            }
+                        ]
+                    },
+                    "Practical Application": {
+                        "questions": [
+                            {
+                                "ques": "Describe a time when you identified a complex bug during testing. How did you handle it?"
+                            },
+                            {
+                                "ques": "What is your approach to creating effective test cases?"
+                            }
+                        ]
+                    },
+                    "Behavioural and Soft Skills Analysis": {
+                        "questions": [
+                            {
+                                "ques": "Describe a challenging team dynamic you’ve experienced and how you managed it."
+                            },
+                            {
+                                "ques": "Can you provide an example of how you handle stress in high-pressure situations?"
+                            }
+                        ]
+                    },
+                    "Cultural Fit and Alignment with Company Values": {
+                        "questions": [
+                            {
+                                "ques": "How do you align your personal values with a company's mission and vision?"
+                            },
+                            {
+                                "ques": "Can you give an example of how you have contributed to a positive work culture in the past?"
+                            }
+                        ]
+                    },
+                    "Candidate Preparedness and Engagement": {
+                        "questions": [
+                            {
+                                "ques": "How did you prepare for this interview?"
+                            },
+                            {
+                                "ques": "What do you know about our company and products, and how do you see yourself contributing?"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+{
+    "success": true,
+    "statusCode": 200,
+    "timestamp": 1738668571942,
+    "errors": [],
+    "message": "Role summary generated successfully",
+    "data": {
+        "role": "MERN Stack Engineer",
+        "questions": {
+            "Initial Screening Interview": {
+                "Verification of Experience and Qualifications": {
+                    "questions": [
+                        {
+                            "ques": "Can you provide detailed examples of your previous experience with the MERN stack in a professional setting?"
+                        },
+                        {
+                            "ques": "What certifications or formal education do you hold that are relevant to MERN stack development?"
+                        }
+                    ]
+                },
+                "Resume Accuracy": {
+                    "questions": [
+                        {
+                            "ques": "Can you confirm that all the technical skills listed on your resume are current and that you are proficient in them?"
+                        },
+                        {
+                            "ques": "Are there any discrepancies or gaps in your resume that we should be aware of?"
+                        }
+                    ]
+                },
+                "Relevance": {
+                    "questions": [
+                        {
+                            "ques": "How do your previous job roles and projects directly relate to the responsibilities of a MERN Stack Engineer?"
+                        },
+                        {
+                            "ques": "What aspects of your experience with MongoDB, Express.js, React, and Node.js make you a strong candidate for this role?"
+                        }
+                    ]
+                },
+                "Communication Skills and Professionalism": {
+                    "questions": [
+                        {
+                            "ques": "Can you describe a complex technical problem you have solved and how you communicated the solution to a non-technical audience?"
+                        },
+                        {
+                            "ques": "What is your approach to maintaining professionalism in stressful project situations?"
+                        }
+                    ]
+                },
+                "Motivation and Interest": {
+                    "questions": [
+                        {
+                            "ques": "What motivates you to work as a MERN Stack Engineer and how does this role fit into your career aspirations?"
+                        },
+                        {
+                            "ques": "Why are you interested in working for our company particularly in the context of MERN stack development?"
+                        }
+                    ]
+                },
+                "Logistical Considerations": {
+                    "questions": [
+                        {
+                            "ques": "Are you able to work onsite, or are you looking exclusively for remote opportunities?"
+                        },
+                        {
+                            "ques": "What are your salary expectations and availability to start in this role?"
+                        }
+                    ]
+                },
+                "First-Round Interview": {
+                    "In-Depth Technical/Functional Skills Evaluation": {
+                        "questions": [
+                            {
+                                "ques": "Can you discuss your experience with optimizing MongoDB database performance within a MERN application?"
+                            },
+                            {
+                                "ques": "Could you explain how you would handle error management in a Node.js backend for a critical application?"
+                            }
+                        ]
+                    },
+                    "Practical Application": {
+                        "questions": [
+                            {
+                                "ques": "Can you walk us through a project where you used React for front-end development? What were the major challenges and how did you address them?"
+                            },
+                            {
+                                "ques": "Could you perform a short coding task to demonstrate your proficiency in Express.js for API development?"
+                            }
+                        ]
+                    },
+                    "Behavioural and Soft Skills Analysis": {
+                        "questions": [
+                            {
+                                "ques": "Describe a time when you had to manage conflicting team opinions while working on a MERN stack project. How did you handle it?"
+                            },
+                            {
+                                "ques": "How do you ensure effective communication with team members who are remote or in different time zones?"
+                            }
+                        ]
+                    },
+                    "Cultural Fit and Alignment with Company Values": {
+                        "questions": [
+                            {
+                                "ques": "How do your personal values align with our company’s mission and values?"
+                            },
+                            {
+                                "ques": "Can you give an example of a contribution you made in a previous role that positively impacted the company culture?"
+                            }
+                        ]
+                    },
+                    "Candidate Preparedness and Engagement": {
+                        "questions": [
+                            {
+                                "ques": "How have you prepared for this interview?"
+                            },
+                            {
+                                "ques": "Can you show examples of your recent work or projects that are particularly relevant to this role?"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+const response = await OpenAIClient.chat.completions.create({
+                model: "gpt-4-turbo",
+                messages: [
+                    {
+                        role: "system",
+                        content: "You generate structured interview questions based on job roles. Return JSON output in the specified format."
+                    },
+                    {
+                        role: "user",
+                        content: `Generate structured interview questions for the role '${role}'. 
+                  Include all categories and subcategories from the following list: 
+                  ${JSON.stringify(categories)}. 
+                  Each subcategory must contain at least 2 questions, ensuring the response follows this JSON structure:
+                  {
+                    "role": "<Job Role>",
+                    "questions": {
+                      "category": {
+                        "<Category Name>": {
+                          "subcategory": {
+                            "<Subcategory Name>": {
+                              "questions": [
+                                { "ques": "<Question 1>" },
+                                { "ques": "<Question 2>" }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  Ensure each subcategory contains at least two relevant questions.`
+                    }
+                ],
+                functions: [
+                    {
+                        name: "generate_interview_questions",
+                        description: "Generate interview questions for each category and subcategory based on a role",
+                        parameters: {
+                            type: "object",
+                            properties: {
+                                role: {
+                                    type: "string",
+                                    description: "Job role for which interview questions are needed"
+                                },
+                                questions: {
+                                    type: "object",
+                                    properties: {
+                                        category: {
+                                            type: "object",
+                                            additionalProperties: {
+                                                type: "object",
+                                                properties: {
+                                                    subcategory: {
+                                                        type: "object",
+                                                        additionalProperties: {
+                                                            type: "object",
+                                                            properties: {
+                                                                questions: {
+                                                                    type: "array",
+                                                                    items: {
+                                                                        type: "object",
+                                                                        properties: {
+                                                                            ques: {
+                                                                                type: "string",
+                                                                                description: "Interview question text"
+                                                                            }
+                                                                        },
+                                                                        required: ["ques"]
+                                                                    }
+                                                                }
+                                                            },
+                                                            required: ["questions"]
+                                                        }
+                                                    }
+                                                },
+                                                required: ["subcategory"]
+                                            }
+                                        }
+                                    },
+                                    required: ["category"]
+                                }
+                            },
+                            required: ["role", "questions"]
+                        }
+                    }
+                ],
+                function_call: { name: "generate_interview_questions" }
+                // functions: [
+                //     {
+                //         name: "generate_interview_questions",
+                //         description: "Generate interview questions for each category and subcategory based on a role",
+                //         parameters: {
+                //             type: "object",
+                //             properties: {
+                //                 role: {
+                //                     type: "string",
+                //                     description: "Job role for which interview questions are needed"
+                //                 },
+                //                 questions: {
+                //                     type: "object",
+                //                     additionalProperties: {
+                //                         type: "object",
+                //                         properties: {
+                //                             questions: {
+                //                                 type: "array",
+                //                                 items: { type: "string" }
+                //                             }
+                //                         }
+                //                     }
+                //                 }
+                //             },
+                //             required: ["role", "questions"]
+                //         }
+                //     }
+                // ],
+                // function_call: { name: "generate_interview_questions" }
+            });
+
+
+
+               // functions: [
+                //     {
+                //         name: "generate_interview_questions",
+                //         description: "Generate interview questions for each category and subcategory based on a role",
+                //         parameters: {
+                //             type: "object",
+                //             properties: {
+                //                 role: {
+                //                     type: "string",
+                //                     description: "Job role for which interview questions are needed"
+                //                 },
+                //                 questions: {
+                //                     type: "object",
+                //                     additionalProperties: {
+                //                         type: "object",
+                //                         properties: {
+                //                             questions: {
+                //                                 type: "array",
+                //                                 items: { type: "string" }
+                //                             }
+                //                         }
+                //                     }
+                //                 }
+                //             },
+                //             required: ["role", "questions"]
+                //         }
+                //     }
+                // ],
+                // function_call: { name: "generate_interview_questions" }

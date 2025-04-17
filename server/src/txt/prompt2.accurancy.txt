@@ -1,0 +1,19 @@
+Use Function Calling (GPT-4 Turbo)
+If you’re using GPT-4 Turbo, function calling lets AI return structured responses without needing long prompts.
+
+- Example: Instead of asking AI to return formatted questions, you define a function:
+
+{
+  "name": "generate_interview_questions",
+  "parameters": {
+    "role": "Sales Assistant",
+    "category": "Motivation and Interest"
+  }
+}
+
+-Benefit: AI automatically fills in the questions without needing a long text prompt
+
+✅ Use Function Calling → Guarantees structured JSON output.
+✅ Minimizes Token Usage → No need for long system prompts.
+✅ Ensures Consistent Responses → AI always follows your predefined structure.
+✅ Easy Regeneration → Update only one category without modifying the rest.

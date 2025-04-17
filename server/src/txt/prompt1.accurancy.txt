@@ -1,0 +1,13 @@
+
+Approach 3: Fine-Tune a Model
+- Best if you have high volume & need complete control
+
+Fine-tune a GPT model on your own dataset with fixed categories.
+The model learns to generate questions per category automatically, even if you send only the role.
+
+Which Approach is Best for You?
+Approach	Pros	Cons
+- System Prompt (Approach 1)	Simple, No Backend Work, Full AI Control	Requires sending a long system prompt every time
+- Backend Categories (Approach 2)	Efficient, Lower AI Costs, More Control	Requires backend logic to organize questions
+- Fine-Tuning (Approach 3)	Fully automated, No need to send prompts	Requires dataset & training
+

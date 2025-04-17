@@ -1,0 +1,54 @@
+functions: [
+    {
+        name: "regenerate_questions",
+        description: "Regenerate a single question for a specific subcategory inside a main category while keeping others unchanged",
+        parameters: {
+            type: "object",
+            properties: {
+                role: {
+                    type: "string",
+                    description: "Job role for which the interview question is being regenerated"
+                },
+                questions: {
+                    type: "object",
+                    properties: {
+                        category: {
+                            type: "object",
+                            additionalProperties: {
+                                type: "object",
+                                properties: {
+                                    subcategory: {
+                                        type: "object",
+                                        additionalProperties: {
+                                            type: "object",
+                                            properties: {
+                                                questions: {
+                                                    type: "array",
+                                                    items: {
+                                                        type: "object",
+                                                        properties: {
+                                                            ques: {
+                                                                type: "string",
+                                                                description: "A newly generated interview question"
+                                                            }
+                                                        },
+                                                        required: ["ques"]
+                                                    }
+                                                }
+                                            },
+                                            required: ["questions"]
+                                        }
+                                    }
+                                },
+                                required: ["subcategory"]
+                            }
+                        }
+                    },
+                    required: ["category"]
+                }
+            },
+            required: ["role", "questions"]
+        }
+    }
+],
+function_call: { name: "regenerate_questions" }

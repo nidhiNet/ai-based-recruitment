@@ -1,0 +1,18 @@
+ functions: [
+    {
+        name: "regenerate_questions",
+        description: "Regenerate questions for a specific subcategory while keeping others unchanged",
+        parameters: {
+                type: "object",
+                properties: {
+                        questions: {
+                                type: "array",
+                                items: { type: "string" }
+                            }
+                        },
+                        required: ["questions"]
+                }
+            }
+        ],
+function_call: { name: "regenerate_questions" }
+            

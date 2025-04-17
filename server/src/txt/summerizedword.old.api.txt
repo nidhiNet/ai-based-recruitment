@@ -1,0 +1,147 @@
+ try {
+            const { body: {
+                role,
+                experience,
+                criteria
+            } } = req;
+
+            const generateTools: OpenAIApi.Chat.Completions.ChatCompletionTool[] = [{
+                type: "function",
+                function: {
+                    name: "generate_summarized_word_list",
+                    description: "Generate a structured summarized word list based on job role, experience level, and interview criteria. The list is categorized according to predefined interview stages.",
+                    parameters: {
+                        type: "object",
+                        properties: {
+                            role: {
+                                type: "string",
+                                description: "The job role for which the summarized word list is generated."
+                            },
+                            experience: {
+                                type: "integer",
+                                description: "Years of work experience of the candidate."
+                            },
+                            criteria: {
+                                type: "object",
+                                properties: {
+                                    "Initial Screening Interview": {
+                                        type: "object",
+                                        description: "List of summarized words relevant to the initial screening process.",
+                                        properties: {
+                                            "Verification of Experience and Qualifications": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to verification of experience, resume accuracy, and relevance of qualifications."
+                                            },
+                                            "Communication Skills and Professionalism": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to clarity of speech, professional demeanor, and articulation."
+                                            },
+                                            "Motivation and Interest": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to passion for the role, career aspirations, and alignment with company vision."
+                                            },
+                                            "Logistical Considerations": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to availability, salary expectations, and relocation readiness."
+                                            }
+                                        },
+                                        required: [
+                                            "Verification of Experience and Qualifications",
+                                            "Communication Skills and Professionalism",
+                                            "Motivation and Interest",
+                                            "Logistical Considerations"
+                                        ],
+                                        additionalProperties: false
+                                    },
+                                    "First-Round (In-Person or Detailed Video) Interview": {
+                                        type: "object",
+                                        description: "List of summarized words relevant to the first-round interview.",
+                                        properties: {
+                                            "In-Depth Technical/Functional Skills Evaluation": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to technical and functional skill assessments, problem-solving, and competency evaluation."
+                                            },
+                                            "Behavioural and Soft Skills Analysis": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to interpersonal skills, adaptability, teamwork, and problem-solving."
+                                            },
+                                            "Cultural Fit and Alignment with Company Values": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to team dynamics, value alignment, and organizational culture fit."
+                                            },
+                                            "Candidate Preparedness and Engagement": {
+                                                type: "array",
+                                                items: {
+                                                    type: "string"
+                                                },
+                                                description: "Summarized words related to research on the company, thoughtful questions, and genuine interest in the role."
+                                            }
+                                        },
+                                        required: [
+                                            "In-Depth Technical/Functional Skills Evaluation",
+                                            "Behavioural and Soft Skills Analysis",
+                                            "Cultural Fit and Alignment with Company Values",
+                                            "Candidate Preparedness and Engagement"
+                                        ],
+                                        additionalProperties: false
+                                    }
+                                },
+                                required: ["Initial Screening Interview", "First-Round (In-Person or Detailed Video) Interview"],
+                                additionalProperties: false
+                            }
+                        },
+                        required: ["role", "experience", "criteria"],
+                        additionalProperties: false
+                    },
+                    strict: true
+                }
+            }];
+
+            const response = await OpenAIClient.chat.completions.create({
+                model: "gpt-4o",
+                messages: [
+                    {
+                        role: "system",
+                        content: "You are an AI that generates structured summarized word lists based on job roles, experience levels, and interview criteria."
+                    },
+                    {
+                        role: "user",
+                        content: "Generate a summarized word list for the given role and experience."
+                    },
+                    {
+                        role: "user",
+                        content: JSON.stringify({ role, experience, criteria })
+                    }
+                ],
+                tools: generateTools,
+                store: true
+            });
+
+            console.log("Response:", JSON.stringify(response, null, 2));
+            const result = (JSON.parse(response.choices[0].message!.tool_calls?.[0]?.function.arguments as string));
+            res.status(StatusCodes.OK).send(new ResponseHelper("Question summerized word generated successfully", result));
+        } catch (error: any) {
+            console.error("Error occured while generatinr a question summerized word", JSON.stringify(error, null, 2));
+            next(catchErrors(StatusCodes.INTERNAL_SERVER_ERROR, error.message))
+        }

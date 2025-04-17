@@ -1,0 +1,54 @@
+functions: [
+  {
+      name: "generate_interview_questions",
+      description: "Generate interview questions for each category and subcategory based on a role",
+      parameters: {
+          type: "object",
+          properties: {
+              role: {
+                  type: "string",
+                  description: "Job role for which interview questions are needed"
+              },
+              questions: {
+                  type: "object",
+                  properties: {
+                      category: {
+                          type: "object",
+                          additionalProperties: {
+                              type: "object",
+                              properties: {
+                                  subcategory: {
+                                      type: "object",
+                                      additionalProperties: {
+                                          type: "object",
+                                          properties: {
+                                              questions: {
+                                                  type: "array",
+                                                  items: {
+                                                      type: "object",
+                                                      properties: {
+                                                          ques: {
+                                                              type: "string",
+                                                              description: "Interview question text"
+                                                          }
+                                                      },
+                                                      required: ["ques"]
+                                                  }
+                                              }
+                                          },
+                                          required: ["questions"]
+                                      }
+                                  }
+                              },
+                              required: ["subcategory"]
+                          }
+                      }
+                  },
+                  required: ["category"]
+              }
+          },
+          required: ["role", "questions"]
+      }
+  }
+],
+function_call: { name: "generate_interview_questions" }
