@@ -463,7 +463,7 @@ class OpenAIController {
             messages: [
               {
                 role: "user",
-                content: `List exactly 5 technical & non-technical skills or areas of expertise required for a ${role} role with ${experience} years of working experience. Format the response as a plain list, one item per line, without numbering or extra text.`,
+                content: `List exactly 5 technical & non-technical skills or areas of expertise required for a ${role} role with between ${experience} years of working experience. Format the response as a plain list, one item per line, without numbering or extra text.`,
               },
               {
                 role: "system",

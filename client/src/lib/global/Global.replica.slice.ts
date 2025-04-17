@@ -7,7 +7,7 @@ interface DTO {
 export interface QuestionsSummerizedWordDTO {
   _id: string;
   role: string;
-  experience: number;
+  experience: string;
   expertise: [string];
   criteria: {
     [key: string]: {
@@ -24,7 +24,7 @@ const initialState: InitialStateTypes = {
   SummerizedQuestionWordList: {
     _id: "",
     role: "",
-    experience: 0,
+    experience: "",
     expertise: [""],
     criteria: {},
   },
@@ -62,8 +62,7 @@ export const globalReplicaSlice = createSlice({
             }
           }
         }
-    },
-    
+    },    
   },
 });
 

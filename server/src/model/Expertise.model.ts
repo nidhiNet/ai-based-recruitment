@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 const ExpertiseSchema = new mongoose.Schema({
     role: {
         type: String,
-        unique: true,
         required: true
     },
     expertise: {

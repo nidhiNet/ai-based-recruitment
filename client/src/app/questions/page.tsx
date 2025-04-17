@@ -15,11 +15,10 @@ const Questions = ({ }: Props) => {
     const router = useRouter();
     const [error, setError] = React.useState<any>(null);
     const [questionsCriteria, setQuestionsCriteria] = React.useState<any>(
-        { _id: "", role: "", experience: 0, expertise: [""], criteria: {} });
+        { _id: "", role: "", experience: "", expertise: [""], criteria: {} });
     const [trainingStatus, setTrainingStatus] = React.useState<boolean>(false);
     const [isLoadingModelLearning, setIsLoadingModelLearning] = React.useState<boolean>(false)
     const dispatch = useAppDispatch();
-
     console.log("state", state)
 
     React.useEffect(() => {
@@ -108,12 +107,7 @@ const Questions = ({ }: Props) => {
                         reGenerateQuestion={(data: any) => { letRegenerateQuestion(data) }} />
                 </div>
                 <div className="flex justify-center mt-[3rem]">
-                    <button className='m-10 bg-green-900 rounded-md p-5 text-[1rem] text-gray-200' onClick={() => { console.log("click on submit!!"); trainModelWithData() }}>Submit</button>
-                    {isLoadingModelLearning && (
-                        <div className="px-4 py-3 text-center">
-                            <Loader size={20} className="animate-spin text-blue-500" />
-                        </div>
-                    )}
+                   <button className='m-10 bg-green-900 rounded-md p-5 text-[1rem] text-gray-200' onClick={() => { console.log("click on submit!!"); trainModelWithData() }}>Submit</button>                    
                 </div>
             </div>
 
@@ -127,7 +121,7 @@ const Questions = ({ }: Props) => {
             {trainingStatus && (
                 <div className="fixed center top-2 w-auto">
                     <div className="bg-green-200 py-3 px-5 rounded-full">
-                        <div className="text-base font-semibold flex gap-2 items-center"><CircleX className="text-green-700" />AI Training is completed...</div>
+                        <div className="text-base font-semibold flex gap-2 items-center"><CircleX className="text-green-700" />Refrence has been saved for future!</div>
                     </div>
                 </div>
             )}

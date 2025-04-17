@@ -14,9 +14,8 @@ import { onSetSummerizedQuestionsWordList } from "@/lib/global/Global.replica.sl
 export default function QuestionSummerizedComponent() {
   const router = useRouter()
   const dispatch = useAppDispatch();
-
   const [role, setRole] = React.useState<string>('');
-  const [experience, setExperience] = React.useState<number>();
+  const [experience, setExperience] = React.useState<string>();
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isSearching, setIsSearching] = React.useState<boolean>(false);
   const [isLoadingSearch, setIsLoadingSearch] = React.useState<boolean>(false);
@@ -36,6 +35,7 @@ export default function QuestionSummerizedComponent() {
 
     setError(null);
     setIsLoading(true);
+    
     try {
       const response = await axios.post<APIResults<IQuestionsDTO>>('http://localhost:3010/api/v1/opanai/questionsummerized',
         {
@@ -81,15 +81,13 @@ export default function QuestionSummerizedComponent() {
       setIsLoadingSearch(false);
     }
   };
-
+    
   const debounceSearch = React.useCallback(lodash.debounce((search) => fetchRoles(search), 1000), []);
-
   React.useEffect(() => {
     return () => {
       debounceSearch.cancel();
     };
   }, []);
-
 
   const onSelectJobRole = (role: string) => {
     setRole(role);
@@ -210,12 +208,12 @@ export default function QuestionSummerizedComponent() {
 
           <div className="relative">
             <input
-              type="number"
+              type="text"
               placeholder="Enter total no of experience"
               className="w-full mt-4 rounded-md border py-2 pl-4 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-slate-100"
               disabled={isLoading}
               onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                setExperience(Number(event.target.value));
+                setExperience(event.target.value);
               }}
               required
             />
